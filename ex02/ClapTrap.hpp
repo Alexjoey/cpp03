@@ -6,7 +6,7 @@
 /*   By: amylle <alexm@live.be>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:54:49 by amylle            #+#    #+#             */
-/*   Updated: 2024/11/07 16:04:56 by amylle           ###   ########.fr       */
+/*   Updated: 2024/11/27 13:11:08 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 class	ClapTrap
 {
 
-private:
+protected:
 
-	std::string	_name;
-	int			_hp;
-	int			_energy;
-	int			_ap;
+	std::string		_name;
+	unsigned int	_hp;
+	unsigned int	_energy;
+	unsigned int	_ap;
 
 public:
 

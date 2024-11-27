@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amylle <alexm@live.be>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:54:49 by amylle            #+#    #+#             */
-/*   Updated: 2024/11/07 16:04:56 by amylle           ###   ########.fr       */
+/*   Created: 2024/11/27 13:33:08 by amylle            #+#    #+#             */
+/*   Updated: 2024/11/27 13:34:43 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
+# include "ClapTrap.hpp"
 
-class	ClapTrap
+class FragTrap: public ClapTrap
 {
-
-private:
-
-	std::string	_name;
-	int			_hp;
-	int			_energy;
-	int			_ap;
-
 public:
 
-	ClapTrap(void);
-	ClapTrap(const std::string name);
-	ClapTrap(const ClapTrap& claptrap);
-	~ClapTrap(void);
-	ClapTrap&	operator= (const ClapTrap& claptrap);
+	FragTrap();
+	FragTrap(const std::string name);
+	FragTrap(const FragTrap& copy);
+	~FragTrap();
 
-	void	attack(const std::string &name);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+	FragTrap&	operator= (const FragTrap& copy);
+
+	void	highFivesGuys(void);
+
+private:
 
 };

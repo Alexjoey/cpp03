@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amylle <alexm@live.be>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:54:49 by amylle            #+#    #+#             */
-/*   Updated: 2024/11/07 16:04:56 by amylle           ###   ########.fr       */
+/*   Created: 2024/11/07 16:55:23 by amylle            #+#    #+#             */
+/*   Updated: 2024/11/27 13:19:59 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-#include <iostream>
-
-class	ClapTrap
+int	main(void)
 {
+	ClapTrap ben("Ben");
+	ScavTrap yom("Yom");
+	FragTrap frag("Frag");
 
-private:
-
-	std::string	_name;
-	int			_hp;
-	int			_energy;
-	int			_ap;
-
-public:
-
-	ClapTrap(void);
-	ClapTrap(const std::string name);
-	ClapTrap(const ClapTrap& claptrap);
-	~ClapTrap(void);
-	ClapTrap&	operator= (const ClapTrap& claptrap);
-
-	void	attack(const std::string &name);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
-
-};
+	ben.attack("Yom");
+	yom.attack("Ben");
+	frag.attack("yom");
+	frag.highFivesGuys();
+}
