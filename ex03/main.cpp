@@ -13,15 +13,12 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void)
 {
-	ClapTrap ben("Ben");
-	ScavTrap yom("Yom");
-	FragTrap frag("Frag");
+	DiamondTrap ben("ben");
 
-	ben.attack("Yom");
-	yom.attack("Ben");
-	frag.attack("yom");
-	frag.highFivesGuys();
+	ben.whoAmI();
+	ben.attack("yom");
 }
