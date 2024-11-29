@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "../inc/DiamondTrap.hpp"
+#include "../inc/ClapTrap.hpp"
+#include "../inc/FragTrap.hpp"
+#include "../inc/ScavTrap.hpp"
 
 DiamondTrap::DiamondTrap(): ClapTrap("DiamondTrap_clap_name"), _name("DiamondTrap")
 {
@@ -45,7 +45,7 @@ DiamondTrap::~DiamondTrap()
 DiamondTrap&	DiamondTrap::operator= (const DiamondTrap& src)
 {
 	this->_name = src._name;
-	FragTrap::_name = FragTrap::_name;
+	FragTrap::_name = src._name + "_clap_name";
 	this->_hp = src._hp;
 	this->_energy = src._energy;
 	this->_ap = src._ap;
@@ -60,4 +60,38 @@ void	DiamondTrap::attack(const std::string& target)
 void	DiamondTrap::whoAmI(void) const
 {
 std::cout << "My name is: " << this->_name << ", my ClapTrap name is: " << ClapTrap::_name << ".\n";
+}
+
+unsigned int	DiamondTrap::getAp() const
+{
+	return (this->_ap);
+}
+
+unsigned int	DiamondTrap::getEnergy() const
+{
+	return (this->_energy);
+}
+
+unsigned int	DiamondTrap::getHp() const
+{
+	return (this->_hp);
+}
+
+std::string	DiamondTrap::getClapName() const
+{
+	return (ClapTrap::_name);
+}
+
+std::string	DiamondTrap::getName() const
+{
+	return (this->_name);
+}
+
+
+std::ostream&	operator<< (std::ostream& os, const DiamondTrap& dt)
+{
+	os << "my name is: " << dt.getName() << ".\nMy ClapTrap name is: " << dt.getClapName();
+	os << ".\nMy hp is: " << dt.getHp() << ".\nMy energy is: " << dt.getEnergy();
+	os << ".\nMy AP is: " << dt.getAp() << ".\n";
+	return (os);
 }

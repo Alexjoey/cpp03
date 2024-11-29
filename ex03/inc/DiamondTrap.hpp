@@ -32,4 +32,11 @@ public:
 	void	attack(const std::string& target);
 	void	whoAmI(void) const;
 
+	unsigned int	getAp() const;
+	unsigned int	getEnergy() const;
+	std::string		getName() const;
+	std::string		getClapName() const;
+	unsigned int	getHp() const;
 };
+
+std::ostream&	operator<< (std::ostream& os, const DiamondTrap& dt);

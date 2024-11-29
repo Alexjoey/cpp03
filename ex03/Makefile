@@ -14,14 +14,14 @@ SRC_DIR	= ./src
 INC_DIR	= ./inc
 OBJ_DIR	= ./obj
 
-SRCS	= ./main.cpp ./ClapTrap.cpp ./ScavTrap.cpp ./FragTrap.cpp ./DiamondTrap.cpp
+SRCS	= ./main.cpp ./src/ClapTrap.cpp ./src/ScavTrap.cpp ./src/FragTrap.cpp ./src/DiamondTrap.cpp
 OBJS	= $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 CC		= c++
-CFLAGS	= -Wextra -Wall -Werror -std=c++98 -Wno-shadow
+CFLAGS	= -Wextra -Wall -Werror -std=c++98 -Wshadow
 INCLUDE	= -I.
 RM		= rm -rf
 
-NAME	= claptrap
+NAME	= DiamondTrap
 
 #---------------------------Messages--------------------------------------------
 

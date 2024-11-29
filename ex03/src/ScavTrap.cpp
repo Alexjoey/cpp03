@@ -13,9 +13,8 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap(void): ClapTrap()
+ScavTrap::ScavTrap(void): ClapTrap("ScavTrap")
 {
-	this->_name = "Scavtrap";
 	this->_hp = 100;
 	this->_energy = 50;
 	this->_ap = 20;

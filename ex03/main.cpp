@@ -10,15 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
+#include "./inc/ClapTrap.hpp"
+#include "./inc/ScavTrap.hpp"
+#include "./inc/FragTrap.hpp"
+#include "./inc/DiamondTrap.hpp"
 
 int	main(void)
 {
 	DiamondTrap ben("ben");
+	DiamondTrap yom;
 
+	yom = ben;
 	ben.whoAmI();
 	ben.attack("yom");
+	std::cout << ben << yom;
 }

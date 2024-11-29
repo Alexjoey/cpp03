@@ -14,9 +14,8 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
-FragTrap::FragTrap(void): ClapTrap()
+FragTrap::FragTrap(void): ClapTrap("FragTrap")
 {
-	this->_name = "Fragtrap";
 	this->_hp = 100;
 	this->_energy = 100;
 	this->_ap = 30;
