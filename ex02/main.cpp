@@ -17,11 +17,10 @@
 int	main(void)
 {
 	ClapTrap ben("Ben");
-	ScavTrap yom("Yom");
 	FragTrap frag("Frag");
 
 	ben.attack("Yom");
-	yom.attack("Ben");
 	frag.attack("yom");
 	frag.highFivesGuys();
+	frag.takeDamage(10);
 }

@@ -70,10 +70,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " is already dead, chill bro.\n";
 		return ;
 	}
-	if (amount > this->_hp)
-		this->_hp = 0;
-	else
-		this->_hp -= amount;
+	this->_hp -= amount;
 	std::cout << "ClapTrap " << this->_name << " takes " << amount;
 	std::cout << " points of damage.\n";
 	if (this->_hp == 0)
