@@ -32,7 +32,7 @@ public:
 	~ClapTrap(void);
 	ClapTrap&	operator= (const ClapTrap& claptrap);
 
-	void	attack(const std::string &name);
+	virtual void	attack(const std::string &name);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 

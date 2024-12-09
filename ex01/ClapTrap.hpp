@@ -29,11 +29,10 @@ public:
 	ClapTrap(void);
 	ClapTrap(const std::string name);
 	ClapTrap(const ClapTrap& claptrap);
-	~ClapTrap(void);
+	virtual ~ClapTrap(void);
 	ClapTrap&	operator= (const ClapTrap& claptrap);
 
-	void	attack(const std::string &name);
+	virtual void	attack(const std::string &name);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-
 };
