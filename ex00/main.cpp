@@ -20,5 +20,6 @@ int	main(void)
 	ben.attack("Yom");
 	yom.attack("Ben");
 	ben.takeDamage(5);
-	ben.beRepaired(20);
+	yom.attack("Ben");
+	yom.attack("Ben");
 }

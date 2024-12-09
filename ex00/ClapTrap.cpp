@@ -56,7 +56,7 @@ void	ClapTrap::attack(const std::string &name)
 	}
 	else
 	{
-		this->_energy--;
+		this->_energy -= 5;
 		std::cout << "ClapTrap " << this->_name << " attacks " << name;
 		std::cout << ", causing " << this->_ap << " points of damage!\n";
 	}
@@ -93,7 +93,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 	{
-		this->_energy--;
+		this->_energy -= 5;
 		this->_hp += amount;
 		std::cout << "ClapTrap " << this->_name << " repairs itself for " << amount;
 		std::cout << " hp.\n";

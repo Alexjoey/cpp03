@@ -17,24 +17,22 @@ ScavTrap::ScavTrap(void): ClapTrap()
 {
 	this->_name = "Scavtrap";
 	this->_hp = 100;
-	this->_energy = 100;
-	this->_ap = 30;
+	this->_energy = 50;
+	this->_ap = 20;
 	std::cout << "Default Scavtrap constructor.\n";
 }
 
 ScavTrap::ScavTrap(const std::string name): ClapTrap(name)
 {
 	this->_hp = 100;
-	this->_energy = 100;
-	this->_ap = 30;
+	this->_energy = 50;
+	this->_ap = 20;
 	std::cout << "Named Scavtrap constructor.\n";
 }
 
 ScavTrap::ScavTrap(const ScavTrap& copy): ClapTrap(copy._name)
 {
-	this->_hp = 100;
-	this->_energy = 100;
-	this->_ap = 30;
+	operator=(copy);
 	std::cout << "Copy Scavtrap constructor.\n";
 }
 

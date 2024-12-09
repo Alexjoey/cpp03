@@ -6,7 +6,7 @@
 /*   By: amylle <alexm@live.be>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:05:07 by amylle            #+#    #+#             */
-/*   Updated: 2024/11/27 13:37:14 by amylle           ###   ########.fr       */
+/*   Updated: 2024/11/27 13:19:30 by amylle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ ScavTrap::ScavTrap(const std::string name): ClapTrap(name)
 
 ScavTrap::ScavTrap(const ScavTrap& copy): ClapTrap(copy._name)
 {
-	this->_hp = 100;
-	this->_energy = 50;
-	this->_ap = 20;
+	operator=(copy);
 	std::cout << "Copy Scavtrap constructor.\n";
 }
 
